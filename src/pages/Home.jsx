@@ -10,7 +10,7 @@ const Home = () => {
       <div className="w-full max-w-[1280px] flex justify-between items-start gap-x-10">
         <div className="flex flex-col flex-1 gap-y-10 ml-10">
           <h1 className="font-bold text-5xl mt-8">
-            Find the Core of Your Home.
+            Find the Core of Your Home2.
           </h1>
           <p className="text-base italic">
             We believe in building a home with intention, one room at a time.
