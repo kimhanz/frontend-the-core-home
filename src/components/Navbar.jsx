@@ -66,7 +66,7 @@ const Navbar = () => {
                             {item.title}
                           </h1>
                           <p className="text-sm text-[#71717A]">
-                            {item.description}
+                            {item.descriptionMenu}
                           </p>
                         </div>
                       </li>
@@ -165,7 +165,7 @@ const Navbar = () => {
                     <div className="flex-1">
                       <h1 className="font-semibold text-sm">{item.title}</h1>
                       <p className="text-sm text-[#71717A]">
-                        {item.description}
+                        {item.descriptionMenu}
                       </p>
                     </div>
                   </DropdownMenuItem>
