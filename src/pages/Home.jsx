@@ -56,8 +56,8 @@ const Home = () => {
       </div>
 
       {/* Categories Room  */}
-      <div className="w-full max-w-[1280px] p-20 flex flex-col justify-center gap-y-48">
-        {categories.map((item) => {
+      <div className="w-full max-w-[1280px] p-20 flex flex-col justify-center gap-y-48 ">
+        {categories.map((item, index) => {
           const textColor = {
             "Living Room": "bg-[#B45309]",
             "Kitchen & Dining Room": "bg-[#44403C]",
@@ -67,7 +67,11 @@ const Home = () => {
             "Balcony & Garden": "bg-[#047857]",
           }
           return (
-            <div className="w-full flex justify-center items-center gap-x-3">
+            <div
+              className={`w-full flex justify-center items-center gap-x-3 ${
+                index % 2 === 0 ? "flex-row-reverse" : ""
+              }`}
+            >
               <div key={item.title} className="flex-1">
                 <img
                   src={item.href}
