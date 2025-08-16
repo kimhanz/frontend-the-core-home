@@ -75,3 +75,24 @@ export const componentImage = [
     href: "./public/images/bed.png",
   },
 ]
+
+export const whyIcon = [
+  {
+    title: "Enduring materials",
+    href: "./public/images/enduring-materials.svg",
+    description:
+      "We exclusively select robust, natural materials, chosen for their inherent strength and designed to last for generations.",
+  },
+  {
+    title: "Timeless design",
+    href: "./public/images/timeless-design.svg",
+    description:
+      "Our aesthetic focuses on clean lines and balanced proportions, creating timeless pieces that transcend trends and remain beautiful for years to come.",
+  },
+  {
+    title: "Thoughtful craftsmanship",
+    href: "./public/images/thoughtful-craftsmanship.svg",
+    description:
+      "Every piece is the result of a meticulous process, with skilled artisans paying close attention to every detail to ensure the highest standard of quality.",
+  },
+]
