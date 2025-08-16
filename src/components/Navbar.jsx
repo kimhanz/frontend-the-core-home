@@ -1,28 +1,28 @@
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { CiSearch } from "react-icons/ci"
-import "../index.css"
+} from "@/components/ui/navigation-menu";
+import { CiSearch } from "react-icons/ci";
+import "../index.css";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-import { AlignJustify, ArrowRight, ChevronDownIcon } from "lucide-react"
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import { categories } from "../data/categories.js"
+import { AlignJustify, ArrowRight, ChevronDownIcon } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { categories } from "../data/categories.js";
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="w-full max-w-[1440px] min-h-[96px] px-4 md:px-[40px] lg:px-[80px] py-[16px] md:py-[24px] mx-auto">
       <div className="w-full max-w-[1280px] flex justify-between items-center gap-4">
@@ -176,7 +176,7 @@ const Navbar = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
