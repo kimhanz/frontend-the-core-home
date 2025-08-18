@@ -9,7 +9,7 @@ export function AuthImagePanel() {
 
   return (
     <div className="relative w-full h-full">
-      <div className="absolute top-0 left-0 w-[240px] transform -rotate-15">
+      <div className="absolute z-1 top-0 left-10 w-[240px] transform -rotate-15">
         <AspectRatio ratio={1 / 1}>
           <img
             src="https://placehold.co/400x400/EAE0D5/4F634A?text=Core+Design"
@@ -19,7 +19,7 @@ export function AuthImagePanel() {
           />
         </AspectRatio>
       </div>
-      <div className="absolute top-0 right-40 w-[240px] transform rotate-15">
+      <div className="absolute z-0 top-15 right-20 w-[240px] transform rotate-15">
         <AspectRatio ratio={1 / 1}>
           <img
             src="https://placehold.co/400x400/A8DADC/4F634A?text=Timeless"
@@ -29,7 +29,7 @@ export function AuthImagePanel() {
           />
         </AspectRatio>
       </div>
-      <div className="absolute bottom-0 left-16 w-[240px] transform rotate-[30deg]">
+      <div className="absolute z-2 bottom-5 left-50 w-[240px] transform rotate-[30deg]">
         <AspectRatio ratio={1 / 1}>
           <img
             src="https://placehold.co/400x400/C27D65/FFFFFF?text=Quality"
