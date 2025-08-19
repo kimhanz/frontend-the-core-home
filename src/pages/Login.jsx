@@ -10,7 +10,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen lg:max-w-7xl mx-auto gap-8 items-center">
+    <div className="flex flex-col min-h-screen lg:max-w-7xl mx-auto px-4 gap-8">
       <header className="flex w-full sticky top-0 z-10 bg-white pt-3">
         <HeaderSection
           title="Login to THE CORE HOME"

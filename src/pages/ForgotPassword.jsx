@@ -10,10 +10,10 @@ export const ForgotPassword = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen lg:max-w-7xl mx-auto gap-8 items-center">
+    <div className="flex flex-col min-h-screen lg:max-w-7xl mx-auto px-4 gap-8">
       <header className="flex w-full sticky top-0 z-10 bg-white pt-3">
         <HeaderSection
-          title="Reset Your Password"
+          title="Forgot Password ?"
           badge="Account Recovery"
           description="No worries. Simply enter your email address below, and we'll send you instructions to safely reset your password."
           onBack={handleBack}

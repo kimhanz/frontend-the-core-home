@@ -160,6 +160,7 @@ export function RegisterForm() {
                           />
                         </FormControl>
                         <Button
+                          className="cursor-pointer"
                           type="button"
                           variant="outline"
                           size="icon"
@@ -181,7 +182,7 @@ export function RegisterForm() {
                 <div className="flex flex-col gap-6 justify-center items-center">
                   <Button
                     type="submit"
-                    className="w-full items-center justify-center"
+                    className="w-full items-center justify-center cursor-pointer"
                   >
                     <BookUser className="h-4 w-4" /> Create an account{" "}
                     <ArrowRight className="h-4 w-4" />
@@ -189,9 +190,9 @@ export function RegisterForm() {
                   <Typography variant="muted">
                     Already have an account ?{" "}
                     <Button
+                      className="p-0 underline underline-offset-8 cursor-pointer"
                       type="button"
                       variant="link"
-                      className="p-0 underline underline-offset-8"
                       onClick={() => navigate("/login")}
                     >
                       Login

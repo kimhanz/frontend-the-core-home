@@ -72,6 +72,7 @@ export function LoginForm() {
                       />
                     </FormControl>
                     <Button
+                      className="cursor-pointer"
                       type="button"
                       variant="outline"
                       size="icon"
@@ -91,18 +92,20 @@ export function LoginForm() {
                 </FormItem>
               )}
             />
-
-            <Button variant="default" type="submit" className="w-full">
+            <Button
+              className="w-full cursor-pointer"
+              variant="default"
+              type="submit"
+            >
               Login <ArrowRight className="h-4 w-4" />
             </Button>
           </form>
         </Form>
-
         <div className="mt-6 flex flex-col items-center gap-4">
           <Button
+            className="w-full cursor-pointer"
             type="button"
             variant="outline"
-            className="w-full"
             onClick={() => navigate("/forgot-password")}
           >
             Forgot Password ? <Undo2 className="h-4 w-4" />
@@ -110,9 +113,9 @@ export function LoginForm() {
           <Typography variant="muted">
             Don't have an account ?{" "}
             <Button
+              className="p-0 underline underline-offset-8 cursor-pointer"
               type="button"
               variant="link"
-              className="p-0 underline underline-offset-8"
               onClick={() => navigate("/register")}
             >
               Create an account

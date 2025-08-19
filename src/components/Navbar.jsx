@@ -90,13 +90,15 @@ const Navbar = () => {
 
         {/* Sign in Button (always visible on desktop) */}
         <div className="hidden lg:block">
-          <Button
-            variant="default"
-            className="bg-black text-white w-[133px] h-[44px]"
-          >
-            Sign in
-            <ArrowRight size={16} />
-          </Button>
+          <Link to="/login">
+            <Button
+              variant="default"
+              className="bg-black text-white w-[133px] h-[44px] cursor-pointer"
+            >
+              Login
+              <ArrowRight size={16} />
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -124,13 +126,16 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Sign in */}
-          <Button
-            variant="default"
-            className="bg-black text-white w-full h-[44px]"
-          >
-            Sign in
-            <ArrowRight size={16} />
-          </Button>
+          <Link to="/login">
+            <Button
+              variant="default"
+              className="bg-black text-white w-full h-[44px]"
+            >
+              Login
+              <ArrowRight size={16} />
+            </Button>
+          </Link>
+
           <div className="flex justify-between items-center gap-x-4 w-full">
             <Button
               variant="default"

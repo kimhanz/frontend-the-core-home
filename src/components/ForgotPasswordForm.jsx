@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Typography } from "@/components/ui/Typography";
+import { ArrowRight } from "lucide-react";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }),
@@ -49,18 +50,17 @@ export function ForgotPasswordForm() {
             your password. Please check your inbox and spam folder.
           </Typography>
           <Button
+            className="mt-4 cursor-pointer"
             variant="default"
-            className="mt-4"
             onClick={() => navigate("/reset-password")}
           >
-            Reset Link in Email
+            Reset Password <ArrowRight />
           </Button>
         </CardContent>
       </Card>
     );
   }
 
-  // แสดงฟอร์มกรอกอีเมล
   return (
     <Card className="w-full max-w-md border-0 shadow-none">
       <CardContent className="p-0">
@@ -73,13 +73,13 @@ export function ForgotPasswordForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="name@example.com" {...field} />
+                    <Input placeholder="@Email.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
+            <Button className="w-full cursor-pointer" type="submit">
               Send Reset Link
             </Button>
           </form>
