@@ -1,9 +1,11 @@
 "use client";
 
+import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useNavigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +19,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Schema พร้อมเช็คว่ารหัสผ่านตรงกัน
 const formSchema = z
   .object({
     password: z
@@ -32,6 +33,8 @@ const formSchema = z
 
 export function ResetPasswordForm() {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -40,7 +43,6 @@ export function ResetPasswordForm() {
 
   function onSubmit(values) {
     console.log("Password has been reset with:", values.password);
-    // ในโปรเจกต์จริง: ส่วนนี้จะเรียก API เพื่ออัปเดตรหัสผ่านใหม่
     alert("Password reset successful!");
     navigate("/login");
   }
@@ -56,9 +58,32 @@ export function ResetPasswordForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>New Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" placeholder="••••••••" {...field} />
-                  </FormControl>
+                  <div className="flex items-center gap-2">
+                    <FormControl>
+                      <Input
+                        type={showPassword ? "text" : "password"}
+                        placeholder="••••••••"
+                        {...field}
+                      />
+                    </FormControl>
+                    <Button
+                      className="cursor-pointer"
+                      type="button"
+                      variant="outline"
+                      size="icon"
+                      onClick={() => setShowPassword(!showPassword)}
+                      aria-label={
+                        showPassword ? "Hide password" : "Show password"
+                      }
+                    >
+                      {/* 3. Corrected icon logic */}
+                      {showPassword ? (
+                        <Eye className="h-4 w-4" />
+                      ) : (
+                        <EyeOff className="h-4 w-4" />
+                      )}
+                    </Button>
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
@@ -68,15 +93,37 @@ export function ResetPasswordForm() {
               control={form.control}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Confirm New Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" placeholder="••••••••" {...field} />
-                  </FormControl>
+                  <FormLabel>Confirm Password</FormLabel>
+                  <div className="flex items-center gap-2">
+                    <FormControl>
+                      <Input
+                        type={showConfirmPassword ? "text" : "password"}
+                        placeholder="••••••••"
+                        {...field}
+                      />
+                    </FormControl>
+                    <Button
+                      className="cursor-pointer"
+                      type="button"
+                      variant="outline"
+                      size="icon"
+                      onClick={() =>
+                        setShowConfirmPassword(!showConfirmPassword)
+                      }
+                    >
+                      {/* 3. Corrected icon logic */}
+                      {showConfirmPassword ? (
+                        <Eye className="h-4 w-4" />
+                      ) : (
+                        <EyeOff className="h-4 w-4" />
+                      )}
+                    </Button>
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
+            <Button className="w-full cursor-pointer" type="submit">
               Set New Password
             </Button>
           </form>

@@ -12,27 +12,27 @@ export function AuthImagePanel() {
       <div className="absolute z-1 top-0 left-10 w-[240px] transform -rotate-15">
         <AspectRatio ratio={1 / 1}>
           <img
-            src="https://placehold.co/400x400/EAE0D5/4F634A?text=Core+Design"
+            src="/public/images/bed.png"
             alt="Abstract home decor 1"
             className="object-cover rounded-lg"
             onError={hideOnError}
           />
         </AspectRatio>
       </div>
-      <div className="absolute z-0 top-15 right-20 w-[240px] transform rotate-15">
+      <div className="absolute z-0 top-10 right-20 w-[240px] transform rotate-15">
         <AspectRatio ratio={1 / 1}>
           <img
-            src="https://placehold.co/400x400/A8DADC/4F634A?text=Timeless"
+            src="/public/images/image-fuji.png"
             alt="Abstract home decor 2"
             className="object-cover rounded-lg"
             onError={hideOnError}
           />
         </AspectRatio>
       </div>
-      <div className="absolute z-2 bottom-5 left-50 w-[240px] transform rotate-[30deg]">
+      <div className="absolute z-2 bottom-0 left-50 w-[240px] transform rotate-[15deg]">
         <AspectRatio ratio={1 / 1}>
           <img
-            src="https://placehold.co/400x400/C27D65/FFFFFF?text=Quality"
+            src="/public/images/chair.png"
             alt="Abstract home decor 3"
             className="object-cover rounded-lg"
             onError={hideOnError}
