@@ -1,6 +1,7 @@
-import { HeaderSection } from "../components/HeaderSection";
+import { HeaderSection } from "../components/shared/HeaderSection";
 import { useNavigate } from "react-router-dom";
-import { ResetPasswordForm } from "../components/ResetPasswordForm";
+import { ResetPasswordForm } from "../components/features/ResetPasswordForm";
+
 export const ResetPassword = () => {
   const navigate = useNavigate();
 

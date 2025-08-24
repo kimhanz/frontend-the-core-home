@@ -7,7 +7,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { CiSearch } from "react-icons/ci";
-import "../index.css";
 
 import {
   DropdownMenu,
@@ -19,7 +18,7 @@ import {
 import { AlignJustify, ArrowRight, ChevronDownIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { categories } from "../data/categories.js";
+import { categories } from "@/data/categories.js";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,6 +1,6 @@
-import { HeaderSection } from "../components/HeaderSection";
+import { HeaderSection } from "../components/shared/HeaderSection";
 import { useNavigate } from "react-router-dom";
-import { RegisterForm } from "../components/RegisterForm";
+import { RegisterForm } from "../components/features/RegisterForm";
 
 export const Register = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
-import { ForgotPasswordForm } from "../components/ForgotPasswordForm";
-import { HeaderSection } from "../components/HeaderSection";
+import { ForgotPasswordForm } from "../components/features/ForgotPasswordForm";
+import { HeaderSection } from "../components/shared/HeaderSection";
 import { useNavigate } from "react-router-dom";
 
 export const ForgotPassword = () => {
