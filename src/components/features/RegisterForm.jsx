@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, BookUser, Eye, EyeOff } from "lucide-react";
-import { AuthImagePanel } from "@/components/AuthImagePanel";
+import { AuthImagePanel } from "@/components/features/AuthImagePanel";
 
 import { Button } from "@/components/ui/button";
 import {
